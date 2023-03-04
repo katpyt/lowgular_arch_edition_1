@@ -1,0 +1,75 @@
+{
+  "workspace": {
+    "workspaceConfig": "angular.json",
+    "workspaceTsConfig": "tsconfig.json",
+    "libsFolder": "projects"
+  },
+  "entities": {
+    "component": {
+      "id": "component",
+      "type": "ANGULAR_COMPONENT",
+      "suffix": "Component",
+      "folder": "ui/$name$",
+      "insideOf": "App",
+      "config": {
+        "stylesExtension": "none",
+        "viewEncapsulation": "Emulated",
+        "selector": "generated",
+        "changeDetectionStrategy": "OnPush"
+      }
+    },
+    "dataService": {
+      "id": "dataService",
+      "type": "ANGULAR_SERVICE",
+      "suffix": "Service",
+      "folder": "services",
+      "insideOf": "App"
+    },
+    "model": {
+      "id": "model",
+      "type": "DATA_STRUCTURE",
+      "suffix": "Model",
+      "folder": "model",
+      "insideOf": "App"
+    },
+    "response": {
+      "id": "response",
+      "type": "DATA_STRUCTURE",
+      "suffix": "Response",
+      "folder": "services",
+      "insideOf": "App"
+    }
+  },
+  "external": {
+    "httpClient": {
+      "id": "httpClient",
+      "type": "HttpClient",
+      "module": "@angular/common/http"
+    },
+    "activatedRoute": {
+      "id": "activatedRoute",
+      "type": "ActivatedRoute",
+      "module": "@angular/router"
+    }
+  },
+  "entityRelations": {
+    "component": {
+      "httpClient": ["CONSTRUCTOR"],
+      "activatedRoute": ["CONSTRUCTOR"],
+      "dataService": ["CONSTRUCTOR"],
+      "component": ["HTML"],
+      "model": ["PROPERTY"]
+    },
+    "dataService": {
+      "model": ["PARAMETER", "RETURN"],
+      "response": ["PARAMETER", "RETURN"],
+      "httpClient": ["CONSTRUCTOR"]
+    },
+    "model": {
+      "model": ["PROPERTY"]
+    },
+    "response": {
+      "response": ["PROPERTY"]
+    }
+  }
+}

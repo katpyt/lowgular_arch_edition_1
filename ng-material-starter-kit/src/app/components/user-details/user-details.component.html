@@ -1,0 +1,8 @@
+<h1>User details</h1><mat-card class="example-card">
+  <mat-card-title>
+    <ng-container *ngIf="details$ | async as item">{{ item.name.lastname }} {{ item.name.firstname }}</ng-container>
+  </mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="details$ | async as item">{{ item.email }}</ng-container>
+  </mat-card-content>
+</mat-card>

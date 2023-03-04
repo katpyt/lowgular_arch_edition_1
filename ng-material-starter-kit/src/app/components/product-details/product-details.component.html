@@ -1,0 +1,12 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{(details$ | async)?.title}}</mat-card-title>
+    <mat-card-subtitle>{{(details$ | async)?.category}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{(details$ | async)?.image}}" style="width:200px;position: center;" alt="Product photo">
+  <mat-card-content>
+    <p>
+      {{(details$ | async)?.description}}
+    </p>
+  </mat-card-content>
+</mat-card>

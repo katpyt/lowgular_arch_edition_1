@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ (details$ | async)?.image}}" alt="employee_image">
+  <div class="card-body">
+    <h5 class="card-title">Employee details</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: {{ (params$ | async)?.id}}</li>
+    <li class="list-group-item">Name: {{ (details$ | async)?.name}}</li>
+    <li class="list-group-item">Age: {{ (details$ | async)?.age}}</li>
+    <li class="list-group-item">Salary: {{ (details$ | async)?.salary}}$</li>
+  </ul>
+  <div class="card-body">
+<!--    <button (click)="remove((params$ | async)?.id)" class="btn btn-outline-danger">Remove</button>-->
+    <a class="card-link" routerLink="/employee-list">Back to list</a>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h3 class="text-decoration-underline">Add new employee</h3>
+
+<form class="row gx-3 gy-3" [formGroup]="newUser" (ngSubmit)="onNewUserSubmitted(newUser.value)">
+  <div class="col-sm-3 form-floating">
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name">
+    <label for="name">Name</label>
+  </div>
+  <div class="col-sm-1 form-floating">
+    <input type="text" class="form-control" id="salary" formControlName="salary" placeholder="Salary">
+    <label for="salary">Salary</label>
+  </div>
+  <div class="col-sm-1 form-floating">
+    <input type="text" class="form-control" id="age" formControlName="age" placeholder="Age">
+    <label for="age">Age</label>
+  </div>
+  <div class="col-auto">
+    <input type="submit" value="Submit" [disabled]="newUser.invalid" class="btn btn-primary btn-lg">
+  </div>
+</form>

@@ -1,0 +1,6 @@
+<mat-card>
+  <mat-card-title>Cart</mat-card-title>
+  <mat-card-content>
+    You have {{ (details$ | async)?.products?.length }} products in the cart: {{ this.getProductsQuantity((details$ | async)?.products) }} pieces in total.
+  </mat-card-content>
+</mat-card>

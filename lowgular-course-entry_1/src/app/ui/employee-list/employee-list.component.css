@@ -1,0 +1,27 @@
+table {
+  border: solid 1px black;
+  border-collapse: collapse;
+  font-family: Arial, serif;
+  font-size: x-small;
+}
+th {
+  font-weight: bold;
+  background-color: lightsteelblue;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 5px;
+}
+
+tr:nth-child(odd){
+  background-color: aliceblue;
+}
+
+button {
+  height: 20px;
+  width: 50px;
+  font-size: x-small;
+  padding: 1px;
+}

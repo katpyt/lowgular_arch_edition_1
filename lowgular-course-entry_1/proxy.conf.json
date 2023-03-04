@@ -1,0 +1,8 @@
+{
+  "/assets/data/*": {
+    "target": "https://eqsfaxnghe.cfolks.pl",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
